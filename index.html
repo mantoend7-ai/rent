@@ -1,551 +1,432 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سهم ناقل لتأجير السيارات</title>
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="سهم ناقل لتأجير السيارات - أسطول متنوع وخدمة حجز سهلة في المملكة العربية السعودية" />
+  <title>سهم ناقل لتأجير السيارات</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="style.css?v=10" />
 </head>
 <body>
+  <div class="preloader" id="preloader">
+    <img src="logo.png" alt="سهم ناقل" />
+  </div>
 
-    <!-- SPLASH SCREEN -->
-    <div id="splash">
-        <img src="logo.png" alt="سهم ناقل" id="splash-logo">
-        <p id="splash-tagline">لتأجير السيارات</p>
+  <header class="site-header" id="siteHeader">
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <div class="topbar-info">
+          <a href="mailto:info@saham-sa.com">info@saham-sa.com</a>
+          <a href="tel:+966920033565">9200 33565</a>
+          <span>خدمة العملاء 24/7</span>
+        </div>
+        <div class="topbar-actions">
+          <a href="#branches">فروعنا</a>
+          <a href="#contact">تواصل معنا</a>
+          <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">☾</button>
+        </div>
+      </div>
     </div>
 
-    <!-- HEADER -->
-    <header>
-        <div class="header-inner">
-            <div class="header-right">
-                <a href="index.html" class="logo-link">
-                    <img src="logo.png" alt="سهم ناقل" class="logo">
-                </a>
-                <div class="brand-text">
-                    <span class="company-name">سهم ناقل</span>
-                    <span class="company-sub">لتأجير السيارات</span>
-                </div>
-            </div>
-            <nav class="main-nav">
-                <a href="#hero">الرئيسية</a>
-                <a href="#fleet">سياراتنا</a>
-                <a href="#features">خدماتنا</a>
-                <a href="#testimonials">آراء العملاء</a>
-                <a href="#contact">تواصل معنا</a>
-            </nav>
-            <div class="header-actions">
-                <button id="dark-toggle" class="icon-btn" title="الوضع الليلي">
-                    <svg id="dark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-                </button>
-                <button id="menu-toggle" class="icon-btn mobile-only" title="القائمة">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-                </button>
-            </div>
-        </div>
-        <!-- Mobile Nav -->
-        <div id="mobile-nav" class="mobile-nav hidden">
-            <a href="#hero">الرئيسية</a>
-            <a href="#fleet">سياراتنا</a>
-            <a href="#features">خدماتنا</a>
-            <a href="#testimonials">آراء العملاء</a>
-            <a href="#contact">تواصل معنا</a>
-        </div>
-    </header>
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="سهم ناقل">
+        <img src="logo.png" alt="سهم ناقل" />
+        <span>
+          <b>سهم ناقل</b>
+          <small>لتأجير السيارات</small>
+        </span>
+      </a>
 
-    <!-- HERO -->
-    <section id="hero" class="hero">
-        <div class="hero-bg-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-        </div>
-        <div class="hero-content">
-            <span class="hero-tag">تأجير سيارات موثوق</span>
-            <h1>اختر سيارتك<br><span class="hero-highlight">وانطلق بثقة</span></h1>
-            <p class="hero-sub">أسطول متنوع من السيارات بأسعار تنافسية وخدمة 24/7 في كل مكان</p>
-            <a href="#fleet" class="hero-btn">تصفح السيارات</a>
-        </div>
-        <div class="hero-car">
-            <img src="car.svg" alt="سيارة" class="hero-car-img">
-        </div>
+      <nav class="nav" id="nav">
+        <a href="#home">الرئيسية</a>
+        <a href="#booking">الحجز</a>
+        <a href="#fleet">سياراتنا</a>
+        <a href="#services">خدماتنا</a>
+        <a href="#offers">العروض</a>
+        <a href="#branches">الفروع</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
 
-        <!-- BOOKING WIDGET -->
-        <div class="booking-widget">
-            <h3 class="booking-title">احجز سيارتك الآن</h3>
-            <div class="booking-fields">
-                <div class="booking-field">
-                    <label>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        موقع الاستلام
-                    </label>
-                    <select>
-                        <option value="">اختر المدينة</option>
-                        <option>الرياض</option>
-                        <option>جدة</option>
-                        <option>الدمام</option>
-                        <option>مكة المكرمة</option>
-                        <option>المدينة المنورة</option>
-                    </select>
-                </div>
-                <div class="booking-field">
-                    <label>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                        تاريخ الاستلام
-                    </label>
-                    <input type="date" id="pickup-date">
-                </div>
-                <div class="booking-field">
-                    <label>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                        تاريخ التسليم
-                    </label>
-                    <input type="date" id="return-date">
-                </div>
-                <button class="booking-btn" onclick="handleBooking()">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    ابحث
-                </button>
-            </div>
+      <a class="login-btn" href="#booking">احجز الآن</a>
+      <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-slider" aria-hidden="true">
+        <div class="hero-slide active" style="background-image:url('assets/hero-1.jpg')"></div>
+        <div class="hero-slide" style="background-image:url('assets/hero-2.jpg')"></div>
+        <div class="hero-slide" style="background-image:url('assets/hero-3.jpg')"></div>
+        <div class="hero-slide" style="background-image:url('assets/hero-4.jpg')"></div>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-grid">
+        <aside class="booking-panel reveal" id="booking">
+          <div class="panel-head">
+            <span>ابحث عن سيارتك</span>
+            <b>ابدأ الحجز</b>
+          </div>
+
+          <form id="bookingForm" class="booking-form">
+            <label>
+              <span>نوع الحجز</span>
+              <select id="rentType">
+                <option>يومي</option>
+                <option>أسبوعي</option>
+                <option>شهري</option>
+              </select>
+            </label>
+            <label>
+              <span>مدينة الاستلام</span>
+              <select id="pickupCity" required>
+                <option value="">اختر المدينة</option>
+                <option>الرياض</option>
+                <option>جدة</option>
+                <option>الدمام</option>
+                <option>الخبر</option>
+                <option>مكة المكرمة</option>
+                <option>المدينة المنورة</option>
+              </select>
+            </label>
+            <label>
+              <span>تاريخ الاستلام</span>
+              <input id="pickupDate" type="date" required />
+            </label>
+            <label>
+              <span>تاريخ التسليم</span>
+              <input id="returnDate" type="date" required />
+            </label>
+            <label>
+              <span>فئة السيارة</span>
+              <select id="carType">
+                <option value="all">كل الفئات</option>
+                <option value="economy">اقتصادية</option>
+                <option value="sedan">سيدان</option>
+                <option value="suv">SUV</option>
+                <option value="luxury">فاخرة</option>
+              </select>
+            </label>
+            <button type="submit">ابحث الآن</button>
+          </form>
+        </aside>
+
+        <div class="hero-content reveal">
+          <span class="eyebrow">تأجير سيارات موثوق</span>
+          <h1>استلم سيارتك بسهولة<br><strong>وانطلق بثقة</strong></h1>
+          <p>أسطول متنوع من السيارات الحديثة، أسعار تنافسية، وخدمة حجز مرنة تناسب رحلاتك اليومية والشهرية في كل مكان.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#fleet">تصفح السيارات</a>
+            <a class="btn ghost" href="https://wa.me/966500000000" target="_blank" rel="noopener">واتساب</a>
+          </div>
         </div>
+      </div>
+
+      <div class="slider-ui">
+        <button data-slide="0" class="active">01</button>
+        <button data-slide="1">02</button>
+        <button data-slide="2">03</button>
+        <button data-slide="3">04</button>
+      </div>
     </section>
 
-    <!-- FLEET -->
-    <section id="fleet" class="fleet-section">
-        <div class="section-header reveal">
-            <span class="section-tag">أسطولنا</span>
-            <h2>اختر من بين سياراتنا</h2>
-            <p>مجموعة متنوعة تناسب جميع الاحتياجات والميزانيات</p>
+    <section class="stats">
+      <div class="container stats-grid">
+        <div><b data-count="80">0</b><span>سيارة جاهزة</span></div>
+        <div><b data-count="12">0</b><span>فرع ونقطة خدمة</span></div>
+        <div><b data-count="3000">0</b><span>عميل سعيد</span></div>
+        <div><b data-count="24">0</b><span>دعم على مدار الساعة</span></div>
+      </div>
+    </section>
+
+    <section class="section offers" id="offers">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>عروضنا</span>
+          <h2>باقات تناسب كل مشوار</h2>
+          <p>تصميم قريب من تجربة المرجع: بطاقات واضحة، CTA مباشر، ومحتوى قابل للتوسع.</p>
+        </div>
+        <div class="offer-grid">
+          <article class="offer-card reveal">
+            <small>الأكثر طلبًا</small>
+            <h3>خصم الحجز المبكر</h3>
+            <p>احجز قبل موعدك واستمتع بسعر أفضل على السيارات الاقتصادية والسيدان.</p>
+            <a href="#booking">احجز العرض</a>
+          </article>
+          <article class="offer-card reveal">
+            <small>شهري</small>
+            <h3>اشتراك الشركات</h3>
+            <p>حلول تأجير مرنة للشركات مع عقود شهرية وخدمة دعم مخصصة.</p>
+            <a href="#contact">تواصل معنا</a>
+          </article>
+          <article class="offer-card reveal">
+            <small>العائلة</small>
+            <h3>رحلات نهاية الأسبوع</h3>
+            <p>سيارات SUV واسعة، تأمين شامل، واستلام وتسليم سهل.</p>
+            <a href="#fleet">شاهد السيارات</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fleet" id="fleet">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>أسطولنا</span>
+          <h2>اختر السيارة المناسبة</h2>
+          <p>بطاقات سيارات قريبة من المرجع مع صور حقيقية، مواصفات، تقييم، وسعر يومي.</p>
+        </div>
+
+        <div class="filters reveal">
+          <button class="filter active" data-filter="all">الكل</button>
+          <button class="filter" data-filter="economy">اقتصادية</button>
+          <button class="filter" data-filter="sedan">سيدان</button>
+          <button class="filter" data-filter="suv">SUV</button>
+          <button class="filter" data-filter="luxury">فاخرة</button>
         </div>
 
         <div class="fleet-grid">
-
-            <div class="car-card reveal">
-                <div class="car-card-img">
-                    <img src="car.svg" alt="سيارة اقتصادية">
-                    <span class="car-badge">الأكثر طلباً</span>
-                </div>
-                <div class="car-card-body">
-                    <h3 class="car-name">سيارة اقتصادية</h3>
-                    <p class="car-type">Sedan</p>
-                    <div class="car-specs">
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 5 مقاعد</span>
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> أوتوماتيك</span>
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> AC</span>
-                    </div>
-                    <div class="car-price-row">
-                        <div class="car-price">
-                            <span class="price-num">—</span>
-                            <span class="price-unit">ر.س / يوم</span>
-                        </div>
-                        <a href="#contact" class="car-book-btn">احجز الآن</a>
-                    </div>
-                </div>
+          <article class="car-card reveal" data-type="sedan">
+            <img src="assets/car-1.jpg" alt="تويوتا كامري" />
+            <div class="car-body">
+              <span>سيدان</span>
+              <h3>تويوتا كامري 2024</h3>
+              <ul><li>5 مقاعد</li><li>أوتوماتيك</li><li>تكييف</li></ul>
+              <div class="price"><b>180 ر.س</b><small>/ يوم</small><a href="#booking">استأجر الآن</a></div>
             </div>
-
-            <div class="car-card reveal">
-                <div class="car-card-img">
-                    <img src="car.svg" alt="سيارة عائلية">
-                </div>
-                <div class="car-card-body">
-                    <h3 class="car-name">سيارة عائلية</h3>
-                    <p class="car-type">SUV</p>
-                    <div class="car-specs">
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 7 مقاعد</span>
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> أوتوماتيك</span>
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> AC</span>
-                    </div>
-                    <div class="car-price-row">
-                        <div class="car-price">
-                            <span class="price-num">—</span>
-                            <span class="price-unit">ر.س / يوم</span>
-                        </div>
-                        <a href="#contact" class="car-book-btn">احجز الآن</a>
-                    </div>
-                </div>
+          </article>
+          <article class="car-card reveal" data-type="luxury">
+            <img src="assets/car-2.jpg" alt="لكزس LX" />
+            <div class="car-body">
+              <span>فاخرة</span>
+              <h3>لكزس LX 600</h3>
+              <ul><li>7 مقاعد</li><li>دفع رباعي</li><li>مقصورة فاخرة</li></ul>
+              <div class="price"><b>950 ر.س</b><small>/ يوم</small><a href="#booking">استأجر الآن</a></div>
             </div>
-
-            <div class="car-card reveal">
-                <div class="car-card-img">
-                    <img src="car.svg" alt="سيارة فاخرة">
-                    <span class="car-badge badge-gold">فاخرة</span>
-                </div>
-                <div class="car-card-body">
-                    <h3 class="car-name">سيارة فاخرة</h3>
-                    <p class="car-type">Luxury</p>
-                    <div class="car-specs">
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 5 مقاعد</span>
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> أوتوماتيك</span>
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> AC</span>
-                    </div>
-                    <div class="car-price-row">
-                        <div class="car-price">
-                            <span class="price-num">—</span>
-                            <span class="price-unit">ر.س / يوم</span>
-                        </div>
-                        <a href="#contact" class="car-book-btn">احجز الآن</a>
-                    </div>
-                </div>
+          </article>
+          <article class="car-card reveal" data-type="luxury">
+            <img src="assets/car-3.jpg" alt="لكزس ES" />
+            <div class="car-body">
+              <span>فاخرة</span>
+              <h3>لكزس ES 250</h3>
+              <ul><li>5 مقاعد</li><li>اقتصاد وقود</li><li>راحة عالية</li></ul>
+              <div class="price"><b>420 ر.س</b><small>/ يوم</small><a href="#booking">استأجر الآن</a></div>
             </div>
-
-            <div class="car-card reveal">
-                <div class="car-card-img">
-                    <img src="car.svg" alt="ميني فان">
-                </div>
-                <div class="car-card-body">
-                    <h3 class="car-name">ميني فان</h3>
-                    <p class="car-type">Van</p>
-                    <div class="car-specs">
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 8 مقاعد</span>
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> أوتوماتيك</span>
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> AC</span>
-                    </div>
-                    <div class="car-price-row">
-                        <div class="car-price">
-                            <span class="price-num">—</span>
-                            <span class="price-unit">ر.س / يوم</span>
-                        </div>
-                        <a href="#contact" class="car-book-btn">احجز الآن</a>
-                    </div>
-                </div>
+          </article>
+          <article class="car-card reveal" data-type="suv">
+            <img src="assets/car-4.webp" alt="SUV عائلية" />
+            <div class="car-body">
+              <span>SUV</span>
+              <h3>بايك X7 2025</h3>
+              <ul><li>7 مقاعد</li><li>مساحة واسعة</li><li>مناسبة للعائلة</li></ul>
+              <div class="price"><b>300 ر.س</b><small>/ يوم</small><a href="#booking">استأجر الآن</a></div>
             </div>
-
-            <div class="car-card reveal">
-                <div class="car-card-img">
-                    <img src="car.svg" alt="بيك أب">
-                </div>
-                <div class="car-card-body">
-                    <h3 class="car-name">بيك أب</h3>
-                    <p class="car-type">Pickup</p>
-                    <div class="car-specs">
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 5 مقاعد</span>
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> يدوي</span>
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> AC</span>
-                    </div>
-                    <div class="car-price-row">
-                        <div class="car-price">
-                            <span class="price-num">—</span>
-                            <span class="price-unit">ر.س / يوم</span>
-                        </div>
-                        <a href="#contact" class="car-book-btn">احجز الآن</a>
-                    </div>
-                </div>
+          </article>
+          <article class="car-card reveal" data-type="suv">
+            <img src="assets/car-5.jpg" alt="فورتشنر" />
+            <div class="car-body">
+              <span>SUV</span>
+              <h3>تويوتا فورتشنر</h3>
+              <ul><li>7 مقاعد</li><li>دفع رباعي</li><li>رحلات طويلة</li></ul>
+              <div class="price"><b>390 ر.س</b><small>/ يوم</small><a href="#booking">استأجر الآن</a></div>
             </div>
-
-            <div class="car-card reveal">
-                <div class="car-card-img">
-                    <img src="car.svg" alt="سيارة رياضية">
-                    <span class="car-badge badge-gold">مميزة</span>
-                </div>
-                <div class="car-card-body">
-                    <h3 class="car-name">سيارة رياضية</h3>
-                    <p class="car-type">Sport</p>
-                    <div class="car-specs">
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> 4 مقاعد</span>
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> أوتوماتيك</span>
-                        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> AC</span>
-                    </div>
-                    <div class="car-price-row">
-                        <div class="car-price">
-                            <span class="price-num">—</span>
-                            <span class="price-unit">ر.س / يوم</span>
-                        </div>
-                        <a href="#contact" class="car-book-btn">احجز الآن</a>
-                    </div>
-                </div>
+          </article>
+          <article class="car-card reveal" data-type="economy">
+            <img src="assets/car-6.jpg" alt="سيارة اقتصادية" />
+            <div class="car-body">
+              <span>اقتصادية</span>
+              <h3>تويوتا يارس</h3>
+              <ul><li>5 مقاعد</li><li>موفرة</li><li>داخل المدينة</li></ul>
+              <div class="price"><b>120 ر.س</b><small>/ يوم</small><a href="#booking">استأجر الآن</a></div>
             </div>
-
+          </article>
         </div>
+      </div>
     </section>
 
-    <!-- STATS -->
-    <section class="stats-section">
-        <div class="stats-grid">
-            <div class="stat-item reveal">
-                <span class="stat-num" data-target="5000">0</span>
-                <span class="stat-label">رحلة ناجحة</span>
-            </div>
-            <div class="stat-item reveal">
-                <span class="stat-num" data-target="3000">0</span>
-                <span class="stat-label">عميل سعيد</span>
-            </div>
-            <div class="stat-item reveal">
-                <span class="stat-num" data-target="50">0</span>
-                <span class="stat-label">سيارة متاحة</span>
-            </div>
-            <div class="stat-item reveal">
-                <span class="stat-num" data-target="10">0</span>
-                <span class="stat-label">سنوات خبرة</span>
-            </div>
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>خدماتنا</span>
+          <h2>تجربة تأجير سهلة من البداية للنهاية</h2>
         </div>
+        <div class="service-grid">
+          <div class="service-card reveal"><i>01</i><h3>استلام وتسليم مرن</h3><p>اختر الفرع أو نقطة الخدمة الأقرب لك.</p></div>
+          <div class="service-card reveal"><i>02</i><h3>تأمين شامل</h3><p>وضوح أكبر وراحة بال أثناء رحلتك.</p></div>
+          <div class="service-card reveal"><i>03</i><h3>حجز إلكتروني</h3><p>خطوات قليلة وتصل للسيارة المناسبة.</p></div>
+          <div class="service-card reveal"><i>04</i><h3>دعم مستمر</h3><p>فريق جاهز لمساعدتك في أي وقت.</p></div>
+        </div>
+      </div>
     </section>
 
-    <!-- FEATURES -->
-    <section id="features" class="features-section">
-        <div class="section-header reveal">
-            <span class="section-tag">لماذا نحن؟</span>
-            <h2>خدمات تجعل تجربتك أفضل</h2>
-            <p>نلتزم بتقديم أعلى مستويات الخدمة والراحة لعملائنا</p>
+    <section class="section branches" id="branches">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>فروعنا</span>
+          <h2>نخدمك في أهم المدن</h2>
         </div>
-        <div class="features-grid">
-            <div class="feature-card reveal">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="32" height="32"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                </div>
-                <h3>خدمة 24/7</h3>
-                <p>نحن متاحون على مدار الساعة طوال أيام الأسبوع لخدمتك في أي وقت</p>
-            </div>
-            <div class="feature-card reveal">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="32" height="32"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                </div>
-                <h3>توصيل واستلام مجاني</h3>
-                <p>نوصل السيارة إلى باب بيتك ونستلمها منك بدون أي تكلفة إضافية</p>
-            </div>
-            <div class="feature-card reveal">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="32" height="32"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-                </div>
-                <h3>صيانة دورية</h3>
-                <p>جميع سياراتنا تخضع لصيانة منتظمة لضمان سلامتك على الطريق</p>
-            </div>
-            <div class="feature-card reveal">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="32" height="32"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
-                <h3>تأمين شامل</h3>
-                <p>جميع سياراتنا مؤمنة بشكل كامل لضمان راحة بالك طوال رحلتك</p>
-            </div>
-            <div class="feature-card reveal">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="32" height="32"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-                </div>
-                <h3>أسعار تنافسية</h3>
-                <p>أفضل الأسعار في السوق مع عروض وخصومات دورية لعملائنا المميزين</p>
-            </div>
-            <div class="feature-card reveal">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="32" height="32"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-                </div>
-                <h3>دعم على الطريق</h3>
-                <p>فريق متخصص جاهز لمساعدتك في حال أي طارئ أثناء رحلتك</p>
-            </div>
+        <div class="branches-grid">
+          <article class="branch-card reveal"><b>الرياض</b><p>طريق الملك فهد - متاح الآن</p><span>مفتوح</span></article>
+          <article class="branch-card reveal"><b>جدة</b><p>حي السلامة - خدمة استلام وتسليم</p><span>مفتوح</span></article>
+          <article class="branch-card reveal"><b>الدمام</b><p>طريق الخليج - أسطول متنوع</p><span>مفتوح</span></article>
         </div>
+      </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="testimonials-section">
-        <div class="section-header reveal">
-            <span class="section-tag">آراء العملاء</span>
-            <h2>ماذا يقول عملاؤنا</h2>
-            <p>تجارب حقيقية من عملاء وثقوا بنا</p>
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>آراء العملاء</span>
+          <h2>ثقة مبنية على تجربة واضحة</h2>
         </div>
-        <div class="testimonials-grid">
-            <div class="testimonial-card reveal">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"خدمة ممتازة وسيارات نظيفة جداً. التوصيل كان في الوقت المحدد تماماً. سأتعامل معهم دائماً."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">أ</div>
-                    <div>
-                        <strong>أحمد المحمد</strong>
-                        <span>الرياض</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card reveal">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"أفضل شركة تأجير سيارات تعاملت معها. الأسعار مناسبة جداً والخدمة احترافية من أول لحظة."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">م</div>
-                    <div>
-                        <strong>محمد العتيبي</strong>
-                        <span>جدة</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card reveal">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"تجربة رائعة من البداية للنهاية. الفريق متعاون ومحترم وحل كل استفساراتي بسرعة."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">س</div>
-                    <div>
-                        <strong>سارة الغامدي</strong>
-                        <span>الدمام</span>
-                    </div>
-                </div>
-            </div>
+        <div class="testimonial-grid">
+          <article class="testimonial reveal"><p>الحجز كان سريع والسيارة وصلت في الموعد. تجربة ممتازة.</p><b>عبدالله</b><span>الرياض</span></article>
+          <article class="testimonial reveal"><p>أسعار واضحة وسيارة نظيفة جدًا. هكرر التجربة.</p><b>محمد</b><span>جدة</span></article>
+          <article class="testimonial reveal"><p>خدمة العملاء متجاوبة وساعدوني أختار الأنسب.</p><b>سارة</b><span>الدمام</span></article>
         </div>
+      </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact-section">
-        <div class="contact-inner">
-            <div class="section-header reveal">
-                <span class="section-tag">تواصل معنا</span>
-                <h2>نحن هنا لخدمتك</h2>
-                <p>تواصل معنا عبر أي من القنوات التالية</p>
-            </div>
-            <div class="contact-cards">
-                <a href="tel:+966920033565" class="contact-card reveal">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-                    </div>
-                    <div>
-                        <p class="contact-label">الهاتف</p>
-                        <p class="contact-value" dir="ltr">9200 33565</p>
-                    </div>
-                </a>
-                <a href="https://wa.me/966500000000" class="contact-card whatsapp reveal">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.126 1.533 5.867L0 24l6.302-1.519A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.574-.493-5.065-1.355L3.5 21.5l.878-3.348A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-                    </div>
-                    <div>
-                        <p class="contact-label">واتساب</p>
-                        <p class="contact-value" dir="ltr">+966 50 000 0000</p>
-                    </div>
-                </a>
-                <a href="mailto:info@saham-sa.com" class="contact-card reveal">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    </div>
-                    <div>
-                        <p class="contact-label">البريد الإلكتروني</p>
-                        <p class="contact-value">info@saham-sa.com</p>
-                    </div>
-                </a>
-                <div class="contact-card reveal">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    </div>
-                    <div>
-                        <p class="contact-label">الموقع</p>
-                        <p class="contact-value">المملكة العربية السعودية</p>
-                    </div>
-                </div>
-            </div>
+    <section class="cta">
+      <div class="container cta-inner">
+        <div>
+          <span>جاهز تنطلق؟</span>
+          <h2>احجز سيارتك الآن خلال دقيقة</h2>
         </div>
+        <a class="btn primary" href="#booking">ابدأ الحجز</a>
+      </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <img src="logo.png" alt="سهم ناقل" class="footer-logo">
-                    <div>
-                        <span class="footer-name">سهم ناقل</span>
-                        <span class="footer-sub">لتأجير السيارات</span>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <a href="#fleet">سياراتنا</a>
-                    <a href="#features">خدماتنا</a>
-                    <a href="#testimonials">آراء العملاء</a>
-                    <a href="#contact">تواصل معنا</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>جميع الحقوق محفوظة &copy; 2025 سهم ناقل لتأجير السيارات</p>
-            </div>
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div class="section-title right reveal">
+          <span>تواصل معنا</span>
+          <h2>احتجت مساعدة؟ نحن هنا</h2>
+          <p>اتصل بنا أو ارسل طلبك وسنرد عليك في أقرب وقت.</p>
+          <div class="contact-list">
+            <a href="tel:+966920033565">9200 33565</a>
+            <a href="mailto:info@saham-sa.com">info@saham-sa.com</a>
+            <a href="https://wa.me/966500000000" target="_blank" rel="noopener">واتساب مباشر</a>
+          </div>
         </div>
-    </footer>
+        <form class="contact-form reveal" id="contactForm">
+          <input required placeholder="الاسم" />
+          <input required type="tel" placeholder="رقم الجوال" />
+          <select><option>استفسار عن حجز</option><option>تأجير شهري</option><option>خدمة شركات</option></select>
+          <textarea placeholder="اكتب رسالتك"></textarea>
+          <button type="submit">إرسال</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
-    <!-- BACK TO TOP -->
-    <button id="back-to-top" title="العودة للأعلى">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
-    </button>
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <img src="logo.png" alt="سهم ناقل" />
+        <p>سهم ناقل لتأجير السيارات — تجربة حجز حديثة، أسطول متنوع، وخدمة موثوقة.</p>
+      </div>
+      <div><b>روابط</b><a href="#fleet">السيارات</a><a href="#services">الخدمات</a><a href="#branches">الفروع</a></div>
+      <div><b>تواصل</b><a href="tel:+966920033565">9200 33565</a><a href="mailto:info@saham-sa.com">info@saham-sa.com</a></div>
+    </div>
+    <p class="copy">© 2026 سهم ناقل. جميع الحقوق محفوظة.</p>
+  </footer>
 
-    <script>
-        /* ── Splash ── */
-        const splash = document.getElementById('splash');
-        setTimeout(() => {
-            splash.classList.add('splash-hide');
-            setTimeout(() => splash.remove(), 700);
-        }, 1600);
+  <a class="whatsapp" href="https://wa.me/966500000000" target="_blank" rel="noopener">واتساب</a>
 
-        /* ── Dark Mode ── */
-        const darkToggle = document.getElementById('dark-toggle');
-        const darkIcon   = document.getElementById('dark-icon');
-        const moonSVG = `<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>`;
-        const sunSVG  = `<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>`;
+  <script>
+    const $ = (s, p = document) => p.querySelector(s);
+    const $$ = (s, p = document) => [...p.querySelectorAll(s)];
 
-        function setDarkMode(enabled) {
-            document.body.classList.toggle('dark', enabled);
-            darkIcon.innerHTML = enabled ? sunSVG : moonSVG;
-            localStorage.setItem('darkMode', enabled ? '1' : '0');
-        }
+    window.addEventListener('load', () => {
+      setTimeout(() => $('#preloader')?.classList.add('hide'), 450);
+    });
 
-        darkToggle.addEventListener('click', () => setDarkMode(!document.body.classList.contains('dark')));
-        const saved = localStorage.getItem('darkMode');
-        if (saved !== null) {
-            setDarkMode(saved === '1');
-        } else {
-            setDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
-        }
+    $('#menuBtn').addEventListener('click', () => $('#nav').classList.toggle('open'));
 
-        /* ── Mobile Nav ── */
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileNav  = document.getElementById('mobile-nav');
-        menuToggle.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
-        mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.add('hidden')));
+    const header = $('#siteHeader');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 40), { passive: true });
 
-        /* ── Back to Top ── */
-        const backBtn = document.getElementById('back-to-top');
-        window.addEventListener('scroll', () => backBtn.classList.toggle('visible', window.scrollY > 300));
-        backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    const today = new Date().toISOString().split('T')[0];
+    $('#pickupDate').min = today;
+    $('#returnDate').min = today;
+    $('#pickupDate').addEventListener('change', e => $('#returnDate').min = e.target.value);
 
-        /* ── Scroll Reveal ── */
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('revealed');
-                    observer.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.12 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    $('#bookingForm').addEventListener('submit', e => {
+      e.preventDefault();
+      if (!$('#pickupCity').value || !$('#pickupDate').value || !$('#returnDate').value) return toast('أكمل بيانات الحجز أولًا', true);
+      if ($('#returnDate').value < $('#pickupDate').value) return toast('تاريخ التسليم يجب أن يكون بعد الاستلام', true);
+      document.querySelector('#fleet').scrollIntoView({ behavior: 'smooth' });
+      toast('تم البحث. اختر سيارتك المناسبة');
+    });
 
-        /* ── Stats Counter ── */
-        function animateCounter(el, target) {
-            let start = 0;
-            const step = Math.ceil(target / 60);
-            const timer = setInterval(() => {
-                start += step;
-                if (start >= target) { el.textContent = target.toLocaleString('ar'); clearInterval(timer); }
-                else el.textContent = start.toLocaleString('ar');
-            }, 25);
-        }
+    $('#contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      e.currentTarget.reset();
+      toast('تم إرسال رسالتك بنجاح');
+    });
 
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    const target = parseInt(e.target.dataset.target);
-                    animateCounter(e.target, target);
-                    statsObserver.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.5 });
-        document.querySelectorAll('.stat-num').forEach(el => statsObserver.observe(el));
+    let current = 0;
+    const slides = $$('.hero-slide');
+    const navBtns = $$('.slider-ui button');
+    function showSlide(i) {
+      current = i;
+      slides.forEach((s, n) => s.classList.toggle('active', n === i));
+      navBtns.forEach((b, n) => b.classList.toggle('active', n === i));
+    }
+    navBtns.forEach((b, i) => b.addEventListener('click', () => showSlide(i)));
+    setInterval(() => showSlide((current + 1) % slides.length), 5200);
 
-        /* ── Booking ── */
-        function handleBooking() {
-            const city   = document.querySelector('.booking-field select').value;
-            const pickup = document.getElementById('pickup-date').value;
-            const ret    = document.getElementById('return-date').value;
-            if (!city || !pickup || !ret) {
-                alert('يرجى تعبئة جميع حقول البحث');
-                return;
-            }
-            document.getElementById('fleet').scrollIntoView({ behavior: 'smooth' });
-        }
+    $$('.filter').forEach(btn => btn.addEventListener('click', () => {
+      $$('.filter').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      $$('.car-card').forEach(card => card.style.display = f === 'all' || card.dataset.type === f ? '' : 'none');
+    }));
 
-        /* ── Set min date for booking inputs ── */
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('pickup-date').min = today;
-        document.getElementById('return-date').min = today;
-        document.getElementById('pickup-date').addEventListener('change', function() {
-            document.getElementById('return-date').min = this.value;
-        });
-    </script>
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('show');
+        io.unobserve(entry.target);
+      });
+    }, { threshold: .14 });
+    $$('.reveal').forEach(el => io.observe(el));
+
+    const counters = $$('.stats b');
+    const counterIo = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target, target = +el.dataset.count;
+        let n = 0, step = Math.max(1, Math.ceil(target / 70));
+        const t = setInterval(() => {
+          n = Math.min(target, n + step);
+          el.textContent = n.toLocaleString('ar-SA') + '+';
+          if (n >= target) clearInterval(t);
+        }, 18);
+        counterIo.unobserve(el);
+      });
+    }, { threshold: .6 });
+    counters.forEach(c => counterIo.observe(c));
+
+    $('#themeToggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      $('#themeToggle').textContent = document.body.classList.contains('dark') ? '☀' : '☾';
+    });
+
+    function toast(message, error = false) {
+      const node = document.createElement('div');
+      node.className = 'toast' + (error ? ' error' : '');
+      node.textContent = message;
+      document.body.appendChild(node);
+      requestAnimationFrame(() => node.classList.add('show'));
+      setTimeout(() => {
+        node.classList.remove('show');
+        setTimeout(() => node.remove(), 250);
+      }, 2800);
+    }
+  </script>
 </body>
 </html>
